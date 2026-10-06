@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algebraische Topologie - Fakt des Tages</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 1.5rem;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background-color: var(--card-bg);
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 2.5rem;
+      max-width: 650px;
+      width: 100%;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .badge {
+      align-self: flex-start;
+      background-color: rgba(56, 189, 248, 0.1);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    .fact-text {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      min-height: 4rem;
+      white-space: pre-wrap; /* Erhält Zeilenumbrüche, falls vorhanden */
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1rem;
+    }
+
+    button {
+      background-color: var(--accent);
+      color: #0f172a;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    button:hover {
+      background-color: var(--accent-hover);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="badge">Algebraische Topologie</div>
+    <div id="fakt" class="fact-text">Lade Fakten...</div>
+    <div class="actions">
+      <button onclick="neuerFakt()">Nächster Fakt ↻</button>
+    </div>
+  </div>
+
+  <script>
+    let alleFakten = [];
+
+    // Lädt die Textdatei aus demselben Ordner
+    fetch('AlgTopo_Fakten.txt')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Datei konnte nicht geladen werden');
+        }
+        return response.text();
+      })
+      .then(text => {
+        // Trennt die Datei an den Zeilenumbrüchen und entfernt leere Zeilen
+        alleFakten = text.split('\n')
+                         .map(zeile => zeile.trim())
+                         .filter(zeile => zeile.length > 0);
+
+        if (alleFakten.length > 0) {
+          neuerFakt();
+        } else {
+          document.getElementById('fakt').innerText = "Die Datei AlgTopo_Fakten.txt ist leer.";
+        }
+      })
+      .catch(error => {
+        document.getElementById('fakt').innerText = "Fehler beim Laden der Fakten. Stelle sicher, dass 'AlgTopo_Fakten.txt' im selben Ordner liegt.";
+        console.error(error);
+      });
+
+    // Wählt zufällig einen Fakt aus der Liste
+    function neuerFakt() {
+      if (alleFakten.length === 0) return;
+      const zufallsIndex = Math.floor(Math.random() * alleFakten.length);
+      document.getElementById('fakt').innerText = alleFakten[zufallsIndex];
+    }
+  </script>
+
+</body>
+</html>
