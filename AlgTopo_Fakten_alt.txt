@@ -1,0 +1,23 @@
+Morphismen von simplizialen Komplexen und geometrische Realisierungen haben beide V(S) als Startraum
+Die Teilräume U und V bei der singulären Mayer-Vietoris Sequenz müssen offen sein, damit das Lemma von Lebesgue angewendet werden kann
+Die Gleichheit von geordneter und orientierter Homologie und Invarianz der Homologie unter baryzentrischer Unterteilung sind Anwendungen von Mayer-Vietoris Induktion
+Morphismen simplizialer Komplexe und deren geometrische Realisierungen sind eindeutig durch ihr Verhalten auf den Ecken V(S) bestimmt.
+Ein simplizialer Teilkomplex muss mit jedem enthaltenen Simplex auch all dessen Ränder enthalten – anders als allgemeine offene Teilräume.
+Die fundamentale Relation ∂² = 0 basiert rein algebraisch auf dem Vorzeichenwechsel (-1)ᵏ in der alternierenden Randformel.
+Die nullte Betti-Zahl b₀(S) misst die Anzahl der Wegzusammenhangskomponenten, da Kanten genau die Differenzen von Ecken beranden.
+Die Euler-Charakteristik χ(S) lässt sich sowohl über die Wechselsumme der Kettenraum-Dimensionen ∑(-1)ᵖ dim Cₚ als auch über die Betti-Zahlen ∑(-1)ᵖ bₚ berechnen.
+Die Kettenhomotopie-Gleichung ∂h + h∂ = g - f drückt geometrisch aus, dass der Rand eines Zylinder-Prismas aus Deckel, Boden und dem Zylinder über dem Rand besteht.
+Sternförmige Komplexe haben triviale höhere Homologiegruppen, da jeder Zyklus durch Kegelbildung über das Zentrum berandet wird.
+Der Verbindungshomomorphismus in Mayer-Vietoris zerlegt einen Zyklus in S ∪ T und bildet ihn auf dessen Rand im Schnitt S ∩ T in der nächstniedrigeren Dimension ab.
+Das 5-Lemma setzt voraus, dass die mittlere Abbildung bereits als Morphismus existiert – es erzeugt selbst keine neue Abbildung zwischen Exakten Sequenzen.
+Die Äquivalenz geordneter und orientierter Homologie sowie die Invarianz unter baryzentrischer Unterteilung werden beide per Mayer-Vietoris-Induktion bewiesen.
+Der duale Kobandoperator d = ∂ᵛ erhöht die Dimension (Cᵖ → Cᵖ⁺¹) und spiegelt die diskrete Version des Satzes von Stokes wider: ∫_c dφ = ∫_∂c φ.
+Die Betti-Zahlen bleiben unter Dualisierung identisch (bₚ(Cᵛ) = bₚ(C)), da transponierte Matrizen stets denselben Rang besitzen – eine Vorschau auf die de Rham-Kohomologie glatter Mannigfaltigkeiten.
+Singuläre Simplizes σ: |Δᵖ| → X erfordern keinerlei Injektivität oder Glattheit; jede stetige Abbildung ist erlaubt.
+Homotope stetige Abbildungen f ≃ g induzieren dieselbe Abbildung auf der Homologie (f_* = g_*), da der Homotopieraum X × [0,1] als Kettenhomotopie übersetzt wird.
+Für die singuläre Mayer-Vietoris-Sequenz müssen die Teilräume U, V offen sein, damit man Abdeckungen durch das Lebesgue-Lemma hinreichend fein unterteilen kann.
+Die baryzentrische Unterteilung sd ist kettenhomotop zur Identität – beliebig feines Unterteilen ändert also die Homologieklasse einer singulären Kette nicht.
+Der Isomorphismus Hₚ(S) ≅ Hₚ(|S|) wird nicht durch eine direkte Kettenabbildung gezeigt, sondern per Mayer-Vietoris-Induktion über Simplex-Überdeckungen bewiesen.
+Der Nervensatz erlaubt es, die Homologie eines komplizierten Raumes X rein kombinatorisch über den Schnittkomplex (Nerv) einer kontraktiblen offenen Überdeckung zu berechnen.
+Der Satz vom Igel (Hairy Ball Theorem) beruht darauf, dass auf geraddimensionalen Sphären S²ᵏ die Antipodenabbildung -id den Grad -1 induziert und daher nicht zur Identität homotop sein kann.
+In der Topologischen Datenanalyse (TDA) signalisieren langlebige Balken im Barcode echte geometrische Löcher einer Punktwolke, während kurze Balken nur als Rauschen werten.
