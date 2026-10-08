@@ -1,82 +1,78 @@
-1. Morphismen simplizialer Komplexe und deren geometrische Realisierungen sind eindeutig durch ihr Verhalten auf den Ecken V(S) bestimmt.
-2. Ein simplizialer Teilkomplex muss mit jedem enthaltenen Simplex auch all dessen Ränder enthalten – anders als allgemeine offene Teilräume.
-3. Die fundamentale Relation \partial^2 = 0 basiert rein algebraisch auf dem Vorzeichenwechsel (-1)^k in der alternierenden Randformel.
-4. Die nullte Betti-Zahl b_0(S) misst die Anzahl der Wegzusammenhangskomponenten, da Kanten genau die Differenzen von Ecken beranden.
-5. Die Euler-Charakteristik \chi(S) lässt sich sowohl über die Wechselsumme der Kettenraum-Dimensionen \sum (-1)^p \dim C_p als auch über die Betti-Zahlen \sum (-1)^p b_p berechnen.
-6. Die Kettenhomotopie-Gleichung \partial h + h\partial = g - f drückt geometrisch aus, dass der Rand eines Zylinder-Prismas aus Deckel, Boden und dem Zylinder über dem Rand besteht.
-7. Sternförmige Komplexe haben triviale höhere Homologiegruppen, da jeder Zyklus durch Kegelbildung über das Zentrum berandet wird.
-8. Der Verbindungshomomorphismus in Mayer-Vietoris zerlegt einen Zyklus in S \cup T und bildet ihn auf dessen Rand im Schnitt S \cap T in der nächstniedrigeren Dimension ab.
-9. Das 5-Lemma setzt voraus, dass die mittlere Abbildung bereits als Morphismus existiert – es erzeugt selbst keine neue Abbildung zwischen Exakten Sequenzen.
-10. Die Äquivalenz geordneter und orientierter Homologie sowie die Invarianz unter baryzentrischer Unterteilung werden beide per Mayer-Vietoris-Induktion bewiesen.
-11. Der duale Kobandoperator d = \partial^ee erhöht die Dimension (C^p 	o C^{p+1}) und spiegelt die diskrete Version des Satzes von Stokes wider: \int_c d\phi = \int_{\partial c} \phi.
-12. Die Betti-Zahlen bleiben unter Dualisierung identisch (b_p(C^ee) = b_p(C)), da transponierte Matrizen stets denselben Rang besitzen – eine Vorschau auf die de Rham-Kohomologie.
-13. Singuläre Simplizes \sigma: |\Delta^p| 	o X erfordern keinerlei Injektivität oder Glattheit; jede stetige Abbildung ist erlaubt.
-14. Homotope stetige Abbildungen f \simeq g induzieren dieselbe Abbildung auf der Homologie (f_* = g_*), da der Homotopieraum X 	imes [0,1] als Kettenhomotopie übersetzt wird.
-15. Für die singuläre Mayer-Vietoris-Sequenz müssen die Teilräume U, V offen sein, damit man Abdeckungen durch das Lebesgue-Lemma hinreichend fein unterteilen kann.
-16. Die baryzentrische Unterteilung sd ist kettenhomotop zur Identität – beliebig feines Unterteilen ändert also die Homologieklasse einer singulären Kette nicht.
-17. Der Isomorphismus H_p(S) \cong H_p(|S|) wird nicht durch eine direkte Kettenabbildung gezeigt, sondern per Mayer-Vietoris-Induktion über Simplex-Überdeckungen induziert.
-18. Der Nervensatz erlaubt es, die Homologie eines komplizierten Raumes X rein kombinatorisch über den Schnittkomplex (Nerv) einer kontraktiblen offenen Überdeckung zu berechnen.
-19. Der Satz vom Igel (Hairy Ball Theorem) beruht darauf, dass auf geraddimensionalen Sphären S^{2k} die Antipodenabbildung -	ext{id} den Grad -1 induziert und daher nicht zur Identität homotop sein kann.
-20. In der Topologischen Datenanalyse (TDA) signalisieren langlebige Balken im Barcode echte geometrische Löcher einer Punktwolke, während kurze Balken nur als Rauschen werten.
-21. Ein abstrakter Simplex ist rein kombinatorisch eine endliche Teilmenge der Eckenmenge V(S), während seine geometrische Realisierung eine konvexe Hülle im Vektorraum R^{V(S)} ist.
-22. Der Funktor der geometrischen Realisierung verknüpft die kombinatorische Kategorie der simplizialen Komplexe mit der topologischen Kategorie der Hausdorff-Räume.
-23. In der orientierten simplizialen Homologie verschwinden Simplizes mit doppelten Ecken automatisch, während sie in der geordneten Homologie explizit herausmoduliert werden müssen.
-24. Die reduzierte Homologie 	ilde{H}_p(S) fügt den leeren Simplex \emptyset als (-1)-Simplex hinzu; dadurch gilt 	ilde{H}_0(	ext{Punkt}) = 0 anstelle von K.
-25. Das Prisma P(S) verbindet zwei Kopien eines Komplexes S; die Prismenabbildung h_p: C_p(S) 	o C_{p+1}(P(S)) ist der fundamentale Baustein für die Konstruktion von Kettenhomotopien.
-26. Kettenhomotope Abbildungen induzieren dieselbe Abbildung auf den Homologiegruppen, weil ihre Differenz g_* - f_* = \partial h + h \partial auf Zykeln (wo \partial c = 0) zu einem Rand wird.
-27. Das Vorzeichen in der ersten Abbildung der Mayer-Vietoris-Kettensequenz c \mapsto (c, -c) garantiert, dass die Verknüpfung der beiden Kettenabbildungen exakt Null ergibt.
-28. Der Wedge-Summen-Satz zeigt, dass das Zusammenkleben zweier zusammenhängender Komplexe an genau einem Punkt die höheren Homologiegruppen einfach als direkte Summe H_p(S) \oplus H_p(T) vereint.
-29. Ein 1-Kozykel \phi \in C^1(S) ordnet jeder gerichteten Kante eine Zahl zu; dass \phi geschlossen ist (d\phi = 0), bedeutet, dass die Summe entlang jedes Dreiecksrands verschwindet (diskrete Wirbelfreiheit).
-30. Ein 0-Kozykel ist genau dann ein Koband (d\phi = \psi), wenn er die Differenz einer Knotenfunktion darstellt – dies entspricht dem diskreten Hauptsatz der Differential- und Integralrechnung.
-31. Der singuläre Kettenraum C_p(X) ist selbst für einfache Räume unendlich-dimensional, da jede noch so wilde stetige Abbildung \sigma: |\Delta^p| 	o X als Basiselement zählt.
-32. Der Grad einer Abbildung 	ext{deg}: H_0(X) 	o K summiert die Koeffizienten der Punkte einer 0-Kette; auf einem wegzusammenhängenden Raum ist dieser Grad ein Isomorphismus.
-33. Die baryzentrische Unterteilung eines singulären Simplex teilt diesen in (p+1)! kleinere Unter-Simplizes auf, behält aber das Gesamtsummen-Verhalten in der Homologie bei.
-34. Um eine singuläre Kette in Ketten auf U und V zu zerlegen, unterteilt man per baryzentrischer Unterteilung so oft, bis jedes kleine Simplex nach dem Lebesgue-Lemma ganz in U oder ganz in V liegt.
-35. Standard-Nachbarschaften in geometrischen Realisierungen sind Deformationstrakte der Teilkomplexe – deshalb kann man in Mayer-Vietoris von offenen Teilräumen zu Teilkomplexen übergehen.
-36. Der Čech-Komplex \check{C}(M,r) erfasst die Schnittstruktur von Bällen um Datenpunkte; nach dem Nervensatz hat er dieselbe Homologie wie die Vereinigung aller Bälle.
-37. Der Brouwersche Fixpunktsatz folgt daraus, dass ein stetiges Retrakt der Scheibe D^n auf ihren Rand S^{n-1} einen unmöglichen Isomorphismus H_{n-1}(S^{n-1}) 	o 0 erzwingen würde.
-38. Invarianz der Dimension bedeutet: R^n und R^m sind für n 
-eq m nicht homöomorph, da die lokalen Homologiegruppen um einen Punkt H_p(R^n, R^n \setminus \{0\}) \cong H_{p-1}(S^{n-1}) die Dimension exakt detektieren.
-39. Der Jordan-Kurvensatz zeigt topologisch, dass jede injektive stetige Kurve S^1 	o S^2 die Sphäre in genau zwei Wegzusammenhangskomponenten zerlegt (b_0(S^2 \setminus S^1) = 2).
-40. Persistent Homology misst die Lebensdauer topologischer Features über veränderliche Radien r: Langlebige Intervalle im Barcode repräsentieren echte Löcher, während kurze Intervallbalken geometrisches Rauschen sind.
-41. Eine glatte n-dimensionale Mannigfaltigkeit ist ein Hausdorff-Raum mit zweiter Abzählbarkeitsachse und einem glatten Atlas, dessen Kartenwechsel Diffeomorphismen auf R^n sind.
-42. Das Hausdorff-Axiom verhindert pathologische Räume wie die „Gerade mit doppelter Null“, während die zweite Abzählbarkeit die Existenz abzählbarer Überdeckungen und Teilungen der Eins garantiert.
-43. Die leere Menge wird im Skript explizit durch die Bedingung X 
-eq \emptyset als Mannigfaltigkeit ausgeschlossen.
-44. Bijektive glatte Abbildungen zwischen Mannigfaltigkeiten sind nicht automatisch Diffeomorphismen; so ist f: R 	o R, x \mapsto x^3 glatt und bijektiv, aber ihre Umkehrung ist bei 0 nicht differenzierbar.
-45. Der Kartenwechsel zweier Atlanten misst die Verträglichkeit lokaler Koordinaten; alle maximalen glatten Atlanten bilden die glatte Struktur der Mannigfaltigkeit.
-46. Komplexe n-dimensionale Mannigfaltigkeiten besitzen holomorphe Kartenwechsel und werden im Reellen stets als orientierbare 2n-dimensionale reelle Mannigfaltigkeiten aufgefasst.
-47. Eine Teilmenge Y \subset X ist eine k-dimensionale Teilmannigfaltigkeit, wenn sie lokal durch angepasste Karten beschrieben werden kann, in denen Y den verschwindenden letzten n-k Koordinaten entspricht.
-48. Nach der lokalen Normalform für Immersionen (rk_a f = n \le m) lässt sich jede Immersion lokal durch eine Koordinatentransformation als kanonische Inklusion (x_1,...,x_n) \mapsto (x_1,...,x_n, 0,...,0) darstellen.
-49. Der Urbildsatz besagt: Ist f: X 	o Y eine glatte Abbildung und y \in Y ein regulärer Wert (d. h. der Rang ist überall auf dem Urbild maximal), so ist f^{-1}(\{y\}) eine Teilmannigfaltigkeit mit Codimension dim Y.
-50. Höckerfunktionen (Bump Functions) besitzen kompakten Träger in einer offenen Menge und ermöglichen das reibungslose Einbetten lokaler Konstruktionen in globale Mannigfaltigkeiten.
-51. Eine Teilung der Eins subordinate zu einer offenen Überdeckung zerlegt die Konstante 1 in eine lokal endliche Summe glatter Funktionen \sum f_i = 1, was globales Zusammenkleben lokaler Integrale erlaubt.
-52. Der Einbettungssatz von Whitney garantiert, dass jede kompakte n-dimensionale Mannigfaltigkeit glatt in einen hochdimensionalen euklidischen Raum R^N eingebettet werden kann.
-53. Ein Vektorbündel \pi: E 	o X vom Rang r weist jedem Punkt x \in X einen r-dimensionalen Vektorraum (Faser E_x) zu und ist lokal isomorph zum trivialen Bündel U 	imes R^r.
-54. Das Tangentialbündel TX fasst alle Tangentialräume T_{X,x} zusammen; lokal entspricht der Übergang zwischen Trivialisierungen genau der Jacobi-Matrix der Kartenwechselabbildung.
-55. Ein Linienbündel (Rang 1) ist genau dann trivialisierbar (isomorph zu X 	imes R), wenn es einen überall von Null verschiedenen glatten Schnitt besitzt.
-56. Das Möbiusband ist das klassische Beispiel für ein nicht-triviales Vektorbündel vom Rang 1 über der Kreislinie S^1; jeder Schnitt muss mindestens eine Nullstelle besitzen.
-57. Das Normalenbündel N_{Y/X} einer Teilmannigfaltigkeit Y \subset X beschreibt in jedem Punkt die zum Tangentialraum TY orthogonalen Vektoren im Umgebungstangentialraum TX.
-58. Der Tubenumgebungssatz besagt, dass eine kompakte Teilmannigfaltigkeit Y \subset R^N eine offene Umgebung besitzt, die diffeomorph zu einer arepsilon-Umgebung des Nullschnitts ihres Normalenbündels ist.
-59. Eine p-Form \omega \in \Omega^p(U) ist ein alternierender Ausdruck aus glatten Funktionen und Keilprodukten dx_{i_1} \wedge ... \wedge dx_{i_p}, wobei doppelte Indizes wegen der Alterniertheit verschwinden.
-60. Der äußere Differentialoperator d: \Omega^p 	o \Omega^{p+1} verallgemeinert Gradient, Rotation und Divergenz aus der Vektoranalysis und erfüllt stets die fundamentale Beziehung d^2 = 0.
-61. Der Pullback f^* \omega zieht Differentialformen entlang glatter Abbildungen f: X 	o Y zurück und kommutiert sowohl mit dem Keilprodukt als auch mit dem äußeren Differential (d(f^* \omega) = f^*(d\omega)).
-62. In de Rham-Theorie heißen Formen mit d\omega = 0 geschlossene Formen (Kozykel) und Formen der Gestalt \omega = d\eta exakte Formen (Kobänder); die de Rham-Kohomologie ist der Quotient H^p_{dR}(X) = Ker d / Im d.
-63. Das Keilprodukt induziert auf der de Rham-Kohomologie H^*_{dR}(X) = igoplus H^p_{dR}(X) eine graduiert-kommutative Ringstruktur: [\omega] \wedge [\eta] = (-1)^{pq} [\eta] \wedge [\omega].
-64. Auf einer offenen Menge U \subset R^n entspricht df dem Gradienten, d\omega für 1-Formen im R^3 der Rotation und d\omega für 2-Formen der Divergenz.
-65. Eine n-dimensionale Mannigfaltigkeit mit Rand besitzt Karten, die lokal wie der Halbraum H^n = \{x \in R^n : x_1 \le 0\} aussehen; ihr Rand \partial X ist eine (n-1)-dimensionale Mannigfaltigkeit.
-66. Eine Orientierung auf X wird durch ein System von Vorzeichenfunktionen festgelegt, sodass alle Kartenwechsel bezüglich der Vorzeichen eine positive Jacobi-Determinante besitzen.
-67. Integration einer n-Form mit kompaktem Träger auf einer orientierten Mannigfaltigkeit wird über eine Teilung der Eins auf lokale Koordinatenintegrale im R^n zurückgeführt.
-68. Der allgemeine Satz von Stokes \int_X d\omega = \int_{\partial X} \omega vereint den Hauptsatz der Differential- und Integralrechnung, den Gaußschen Integralsatz und den klassischen Stokesschen Integralsatz in einer einzigen Formel.
-69. Auf einer kompakten orientierten Mannigfaltigkeit ohne Rand (\partial X = \emptyset) verschwindet das Integral jeder exakten Form (\int_X d\eta = 0), weshalb Integration eine wohldefinierte Abbildung H^n_{dR}(X) 	o R induziert.
-70. Ein komplexer Atlas induziert durch die Cauchy-Riemannschen Differentialgleichungen stets eine natürliche Orientierung, da die komplexe Jacobi-Determinante als Quadrat eines Betrags stets positiv ist.
-71. Das Poincaré-Lemma besagt, dass auf einem sternförmigen Gebiet (oder R^n) jede geschlossene p-Form für p > 0 exakt ist; somit gilt H^p_{dR}(R^n) = 0 für alle p > 0.
-72. Die de Rham-Mayer-Vietoris-Sequenz verknüpft die de Rham-Kohomologie von U \cup V, U, V und U \cap V in einer langen exakten Sequenz unter Verwendung von Teilungen der Eins.
-73. Glatte singuläre Homologie H_*^{sm}(X) liefert dieselben Homologiegruppen wie die allgemeine stetige singuläre Homologie, da sich stetige Simplizes glatt approximieren lassen.
-74. Der Satz von de Rham zeigt, dass die Auswertung von geschlossenen Differentialformen auf glatten singulären Ketten \omega \mapsto \int_c \omega einen natürlichen Isomorphismus H^p_{dR}(X) \cong H^p(X, R) induziert.
-75. Die Berechnung der de Rham-Kohomologie der Kreislinie H^1_{dR}(S^1) \cong R erfolgt analytisch über eine Höcker-1-Form mit Integral 1, was genau dem diskreten Kozykel im simplizialen Fall entspricht.
-76. Die de Rham-Kohomologie mit kompaktem Träger H^p_c(X) verwendet nur Formen mit kompaktem Träger; für den nicht-kompakten Raum R^n gilt H^n_c(R^n) \cong R, während H^0_c(R^n) = 0 ist.
-77. Die Poincaré-Dualität besagt, dass für eine orientierte n-dimensionale Mannigfaltigkeit die Paarung [\omega] \otimes [\eta] \mapsto \int_X \omega \wedge \eta einen Isomorphismus H^p(X) \cong (H^{n-p}_c(X))^ee induziert.
-78. Für kompakte orientierte Mannigfaltigkeiten impliziert Poincaré-Dualität die Betti-Zahlen-Symmetrie b_p(X) = b_{n-p}(X) sowie die Endlichdimensionalität aller Betti-Zahlen.
-79. Die Poincaré-Duale \eta_Y \in H^{n-p}(X) einer p-dimensionalen kompakten Teilmannigfaltigkeit Y \subset X ist eine Form, für die \int_Y \omega = \int_X \eta_Y \wedge \omega für alle geschlossenen Formen \omega gilt (eine glatte Approximation der Dirac-Delta-Form).
-80. Das Keilprodukt in der de Rham-Kohomologie entspricht unter Poincaré-Dualität genau dem transversalen Schnitt von Teilmannigfaltigkeiten: [\eta_Y] \wedge [\eta_{	ilde{Y}}] = [\eta_{Y \cap 	ilde{Y}}].
+Morphismen simplizialer Komplexe und deren geometrische Realisierungen sind eindeutig durch ihr Verhalten auf den Ecken V(S) bestimmt.
+Ein simplizialer Teilkomplex muss mit jedem enthaltenen Simplex auch all dessen Ränder enthalten – anders als allgemeine offene Teilräume.
+Die fundamentale Relation \partial^2 = 0 basiert rein algebraisch auf dem Vorzeichenwechsel (-1)^k in der alternierenden Randformel.
+Die nullte Betti-Zahl b_0(S) misst die Anzahl der Wegzusammenhangskomponenten, da Kanten genau die Differenzen von Ecken beranden.
+Die Euler-Charakteristik \chi(S) lässt sich sowohl über die Wechselsumme der Kettenraum-Dimensionen \sum (-1)^p \dim C_p als auch über die Betti-Zahlen \sum (-1)^p b_p berechnen.
+Die Kettenhomotopie-Gleichung \partial h + h\partial = g - f drückt geometrisch aus, dass der Rand eines Zylinder-Prismas aus Deckel, Boden und dem Zylinder über dem Rand besteht.
+Sternförmige Komplexe haben triviale höhere Homologiegruppen, da jeder Zyklus durch Kegelbildung über das Zentrum berandet wird.
+Der Verbindungshomomorphismus in Mayer-Vietoris zerlegt einen Zyklus in S \cup T und bildet ihn auf dessen Rand im Schnitt S \cap T in der nächstniedrigeren Dimension ab.
+Das 5-Lemma setzt voraus, dass die mittlere Abbildung bereits als Morphismus existiert – es erzeugt selbst keine neue Abbildung zwischen Exakten Sequenzen.
+Die Äquivalenz geordneter und orientierter Homologie sowie die Invarianz unter baryzentrischer Unterteilung werden beide per Mayer-Vietoris-Induktion bewiesen.
+Der duale Kobandoperator d = \partial^ee erhöht die Dimension (C^p 	o C^{p+1}) und spiegelt die diskrete Version des Satzes von Stokes wider: \int_c d\phi = \int_{\partial c} \phi.
+Die Betti-Zahlen bleiben unter Dualisierung identisch (b_p(C^ee) = b_p(C)), da transponierte Matrizen stets denselben Rang besitzen – eine Vorschau auf die de Rham-Kohomologie.
+Singuläre Simplizes \sigma: |\Delta^p| 	o X erfordern keinerlei Injektivität oder Glattheit; jede stetige Abbildung ist erlaubt.
+Homotope stetige Abbildungen f \simeq g induzieren dieselbe Abbildung auf der Homologie (f_* = g_*), da der Homotopieraum X 	imes [0,1] als Kettenhomotopie übersetzt wird.
+Für die singuläre Mayer-Vietoris-Sequenz müssen die Teilräume U, V offen sein, damit man Abdeckungen durch das Lebesgue-Lemma hinreichend fein unterteilen kann.
+Die baryzentrische Unterteilung sd ist kettenhomotop zur Identität – beliebig feines Unterteilen ändert also die Homologieklasse einer singulären Kette nicht.
+Der Isomorphismus H_p(S) \cong H_p(|S|) wird nicht durch eine direkte Kettenabbildung gezeigt, sondern per Mayer-Vietoris-Induktion über Simplex-Überdeckungen induziert.
+Der Nervensatz erlaubt es, die Homologie eines komplizierten Raumes X rein kombinatorisch über den Schnittkomplex (Nerv) einer kontraktiblen offenen Überdeckung zu berechnen.
+Der Satz vom Igel (Hairy Ball Theorem) beruht darauf, dass auf geraddimensionalen Sphären S^{2k} die Antipodenabbildung -	ext{id} den Grad -1 induziert und daher nicht zur Identität homotop sein kann.
+In der Topologischen Datenanalyse (TDA) signalisieren langlebige Balken im Barcode echte geometrische Löcher einer Punktwolke, während kurze Balken nur als Rauschen werten.
+Ein abstrakter Simplex ist rein kombinatorisch eine endliche Teilmenge der Eckenmenge V(S), während seine geometrische Realisierung eine konvexe Hülle im Vektorraum R^{V(S)} ist.
+Der Funktor der geometrischen Realisierung verknüpft die kombinatorische Kategorie der simplizialen Komplexe mit der topologischen Kategorie der Hausdorff-Räume.
+In der orientierten simplizialen Homologie verschwinden Simplizes mit doppelten Ecken automatisch, während sie in der geordneten Homologie explizit herausmoduliert werden müssen.
+Das Prisma P(S) verbindet zwei Kopien eines Komplexes S; die Prismenabbildung h_p: C_p(S) 	o C_{p+1}(P(S)) ist der fundamentale Baustein für die Konstruktion von Kettenhomotopien.
+Kettenhomotope Abbildungen induzieren dieselbe Abbildung auf den Homologiegruppen, weil ihre Differenz g_* - f_* = \partial h + h \partial auf Zykeln (wo \partial c = 0) zu einem Rand wird.
+Das Vorzeichen in der ersten Abbildung der Mayer-Vietoris-Kettensequenz c \mapsto (c, -c) garantiert, dass die Verknüpfung der beiden Kettenabbildungen exakt Null ergibt.
+Der Wedge-Summen-Satz zeigt, dass das Zusammenkleben zweier zusammenhängender Komplexe an genau einem Punkt die höheren Homologiegruppen einfach als direkte Summe H_p(S) \oplus H_p(T) vereint.
+Ein 1-Kozykel \phi \in C^1(S) ordnet jeder gerichteten Kante eine Zahl zu; dass \phi geschlossen ist (d\phi = 0), bedeutet, dass die Summe entlang jedes Dreiecksrands verschwindet (diskrete Wirbelfreiheit).
+Ein 0-Kozykel ist genau dann ein Koband (d\phi = \psi), wenn er die Differenz einer Knotenfunktion darstellt – dies entspricht dem diskreten Hauptsatz der Differential- und Integralrechnung.
+Der singuläre Kettenraum C_p(X) ist selbst für einfache Räume unendlich-dimensional, da jede noch so wilde stetige Abbildung \sigma: |\Delta^p| 	o X als Basiselement zählt.
+Die baryzentrische Unterteilung eines singulären Simplex teilt diesen in (p+1)! kleinere Unter-Simplizes auf, behält aber das Gesamtsummen-Verhalten in der Homologie bei.
+Um eine singuläre Kette in Ketten auf U und V zu zerlegen, unterteilt man per baryzentrischer Unterteilung so oft, bis jedes kleine Simplex nach dem Lebesgue-Lemma ganz in U oder ganz in V liegt.
+Standard-Nachbarschaften in geometrischen Realisierungen sind Deformationstrakte der Teilkomplexe – deshalb kann man in Mayer-Vietoris von offenen Teilräumen zu Teilkomplexen übergehen.
+Der Čech-Komplex \check{C}(M,r) erfasst die Schnittstruktur von Bällen um Datenpunkte; nach dem Nervensatz hat er dieselbe Homologie wie die Vereinigung aller Bälle.
+Der Brouwersche Fixpunktsatz folgt daraus, dass ein stetiges Retrakt der Scheibe D^n auf ihren Rand S^{n-1} einen unmöglichen Isomorphismus H_{n-1}(S^{n-1}) 	o 0 erzwingen würde.
+Invarianz der Dimension bedeutet: R^n und R^m sind für n != m nicht homöomorph, da die lokalen Homologiegruppen um einen Punkt H_p(R^n, R^n \setminus \{0\}) \cong H_{p-1}(S^{n-1}) die Dimension exakt detektieren.
+Der Jordan-Kurvensatz zeigt topologisch, dass jede injektive stetige Kurve S^1 	o S^2 die Sphäre in genau zwei Wegzusammenhangskomponenten zerlegt (b_0(S^2 \setminus S^1) = 2).
+Persistent Homology misst die Lebensdauer topologischer Features über veränderliche Radien r: Langlebige Intervalle im Barcode repräsentieren echte Löcher, während kurze Intervallbalken geometrisches Rauschen sind.
+Eine glatte n-dimensionale Mannigfaltigkeit ist ein Hausdorff-Raum mit zweiter Abzählbarkeitsachse und einem glatten Atlas, dessen Kartenwechsel Diffeomorphismen auf R^n sind.
+Das Hausdorff-Axiom verhindert pathologische Räume wie die „Gerade mit doppelter Null“, während die zweite Abzählbarkeit die Existenz abzählbarer Überdeckungen und Teilungen der Eins garantiert.
+Die leere Menge wird im Skript explizit durch die Bedingung X nichtleer als Mannigfaltigkeit ausgeschlossen.
+Bijektive glatte Abbildungen zwischen Mannigfaltigkeiten sind nicht automatisch Diffeomorphismen; so ist f: R 	o R, x \mapsto x^3 glatt und bijektiv, aber ihre Umkehrung ist bei 0 nicht differenzierbar.
+Der Kartenwechsel zweier Atlanten misst die Verträglichkeit lokaler Koordinaten; alle maximalen glatten Atlanten bilden die glatte Struktur der Mannigfaltigkeit.
+Komplexe n-dimensionale Mannigfaltigkeiten besitzen holomorphe Kartenwechsel und werden im Reellen stets als orientierbare 2n-dimensionale reelle Mannigfaltigkeiten aufgefasst.
+Eine Teilmenge Y \subset X ist eine k-dimensionale Teilmannigfaltigkeit, wenn sie lokal durch angepasste Karten beschrieben werden kann, in denen Y den verschwindenden letzten n-k Koordinaten entspricht.
+Nach der lokalen Normalform für Immersionen (rk_a f = n \le m) lässt sich jede Immersion lokal durch eine Koordinatentransformation als kanonische Inklusion (x_1,...,x_n) \mapsto (x_1,...,x_n, 0,...,0) darstellen.
+Der Urbildsatz besagt: Ist f: X 	o Y eine glatte Abbildung und y \in Y ein regulärer Wert (d. h. der Rang ist überall auf dem Urbild maximal), so ist f^{-1}(\{y\}) eine Teilmannigfaltigkeit mit Codimension dim Y.
+Höckerfunktionen (Bump Functions) besitzen kompakten Träger in einer offenen Menge und ermöglichen das reibungslose Einbetten lokaler Konstruktionen in globale Mannigfaltigkeiten.
+Eine Teilung der Eins subordinate zu einer offenen Überdeckung zerlegt die Konstante 1 in eine lokal endliche Summe glatter Funktionen \sum f_i = 1, was globales Zusammenkleben lokaler Integrale erlaubt.
+Der Einbettungssatz von Whitney garantiert, dass jede kompakte n-dimensionale Mannigfaltigkeit glatt in einen hochdimensionalen euklidischen Raum R^N eingebettet werden kann.
+Ein Vektorbündel \pi: E 	o X vom Rang r weist jedem Punkt x \in X einen r-dimensionalen Vektorraum (Faser E_x) zu und ist lokal isomorph zum trivialen Bündel U 	imes R^r.
+Das Tangentialbündel TX fasst alle Tangentialräume T_{X,x} zusammen; lokal entspricht der Übergang zwischen Trivialisierungen genau der Jacobi-Matrix der Kartenwechselabbildung.
+Ein Linienbündel (Rang 1) ist genau dann trivialisierbar (isomorph zu X 	imes R), wenn es einen überall von Null verschiedenen glatten Schnitt besitzt.
+Das Möbiusband ist das klassische Beispiel für ein nicht-triviales Vektorbündel vom Rang 1 über der Kreislinie S^1; jeder Schnitt muss mindestens eine Nullstelle besitzen.
+Das Normalenbündel N_{Y/X} einer Teilmannigfaltigkeit Y \subset X beschreibt in jedem Punkt die zum Tangentialraum TY orthogonalen Vektoren im Umgebungstangentialraum TX.
+Der Tubenumgebungssatz besagt, dass eine kompakte Teilmannigfaltigkeit Y \subset R^N eine offene Umgebung besitzt, die diffeomorph zu einer arepsilon-Umgebung des Nullschnitts ihres Normalenbündels ist.
+Eine p-Form \omega \in \Omega^p(U) ist ein alternierender Ausdruck aus glatten Funktionen und Keilprodukten dx_{i_1} \wedge ... \wedge dx_{i_p}, wobei doppelte Indizes wegen der Alterniertheit verschwinden.
+Der äußere Differentialoperator d: \Omega^p 	o \Omega^{p+1} verallgemeinert Gradient, Rotation und Divergenz aus der Vektoranalysis und erfüllt stets die fundamentale Beziehung d^2 = 0.
+Der Pullback f^* \omega zieht Differentialformen entlang glatter Abbildungen f: X 	o Y zurück und kommutiert sowohl mit dem Keilprodukt als auch mit dem äußeren Differential (d(f^* \omega) = f^*(d\omega)).
+In de Rham-Theorie heißen Formen mit d\omega = 0 geschlossene Formen (Kozykel) und Formen der Gestalt \omega = d\eta exakte Formen (Kobänder); die de Rham-Kohomologie ist der Quotient H^p_{dR}(X) = Ker d / Im d.
+Das Keilprodukt induziert auf der de Rham-Kohomologie H^*_{dR}(X) = igoplus H^p_{dR}(X) eine graduiert-kommutative Ringstruktur: [\omega] \wedge [\eta] = (-1)^{pq} [\eta] \wedge [\omega].
+Auf einer offenen Menge U \subset R^n entspricht df dem Gradienten, d\omega für 1-Formen im R^3 der Rotation und d\omega für 2-Formen der Divergenz.
+Eine n-dimensionale Mannigfaltigkeit mit Rand besitzt Karten, die lokal wie der Halbraum H^n = \{x \in R^n : x_1 \le 0\} aussehen; ihr Rand \partial X ist eine (n-1)-dimensionale Mannigfaltigkeit.
+Eine Orientierung auf X wird durch ein System von Vorzeichenfunktionen festgelegt, sodass alle Kartenwechsel bezüglich der Vorzeichen eine positive Jacobi-Determinante besitzen.
+Integration einer n-Form mit kompaktem Träger auf einer orientierten Mannigfaltigkeit wird über eine Teilung der Eins auf lokale Koordinatenintegrale im R^n zurückgeführt.
+Der allgemeine Satz von Stokes \int_X d\omega = \int_{\partial X} \omega vereint den Hauptsatz der Differential- und Integralrechnung, den Gaußschen Integralsatz und den klassischen Stokesschen Integralsatz in einer einzigen Formel.
+Auf einer kompakten orientierten Mannigfaltigkeit ohne Rand (\partial X = \emptyset) verschwindet das Integral jeder exakten Form (\int_X d\eta = 0), weshalb Integration eine wohldefinierte Abbildung H^n_{dR}(X) 	o R induziert.
+Ein komplexer Atlas induziert durch die Cauchy-Riemannschen Differentialgleichungen stets eine natürliche Orientierung, da die komplexe Jacobi-Determinante als Quadrat eines Betrags stets positiv ist.
+Das Poincaré-Lemma besagt, dass auf einem sternförmigen Gebiet (oder R^n) jede geschlossene p-Form für p > 0 exakt ist; somit gilt H^p_{dR}(R^n) = 0 für alle p > 0.
+Die de Rham-Mayer-Vietoris-Sequenz verknüpft die de Rham-Kohomologie von U \cup V, U, V und U \cap V in einer langen exakten Sequenz unter Verwendung von Teilungen der Eins.
+Glatte singuläre Homologie H_*^{sm}(X) liefert dieselben Homologiegruppen wie die allgemeine stetige singuläre Homologie, da sich stetige Simplizes glatt approximieren lassen.
+Der Satz von de Rham zeigt, dass die Auswertung von geschlossenen Differentialformen auf glatten singulären Ketten \omega \mapsto \int_c \omega einen natürlichen Isomorphismus H^p_{dR}(X) \cong H^p(X, R) induziert.
+Die Berechnung der de Rham-Kohomologie der Kreislinie H^1_{dR}(S^1) \cong R erfolgt analytisch über eine Höcker-1-Form mit Integral 1, was genau dem diskreten Kozykel im simplizialen Fall entspricht.
+Die de Rham-Kohomologie mit kompaktem Träger H^p_c(X) verwendet nur Formen mit kompaktem Träger; für den nicht-kompakten Raum R^n gilt H^n_c(R^n) \cong R, während H^0_c(R^n) = 0 ist.
+Die Poincaré-Dualität besagt, dass für eine orientierte n-dimensionale Mannigfaltigkeit die Paarung [\omega] \otimes [\eta] \mapsto \int_X \omega \wedge \eta einen Isomorphismus H^p(X) \cong (H^{n-p}_c(X))^ee induziert.
+Für kompakte orientierte Mannigfaltigkeiten impliziert Poincaré-Dualität die Betti-Zahlen-Symmetrie b_p(X) = b_{n-p}(X) sowie die Endlichdimensionalität aller Betti-Zahlen.
+Die Poincaré-Duale \eta_Y \in H^{n-p}(X) einer p-dimensionalen kompakten Teilmannigfaltigkeit Y \subset X ist eine Form, für die \int_Y \omega = \int_X \eta_Y \wedge \omega für alle geschlossenen Formen \omega gilt (eine glatte Approximation der Dirac-Delta-Form).
+Das Keilprodukt in der de Rham-Kohomologie entspricht unter Poincaré-Dualität genau dem transversalen Schnitt von Teilmannigfaltigkeiten: [\eta_Y] \wedge [\eta_{	ilde{Y}}] = [\eta_{Y \cap 	ilde{Y}}].
